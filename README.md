@@ -13,6 +13,7 @@
 Creating conda environment
 ```
 conda create -p venv python==3.7 -y
+ conda install -c anaconda scikit-learn
 ```
 ```
 conda activate venv/
@@ -62,19 +63,24 @@ To check remote url
 git remote -v
 ```
 BUILD DOCKER IMAGE
-
+-----------------------------------------
 docker build -t <image_name>:<tagname> .
 Note: Image name for docker must be lowercase
-
+'''''''''''''''''''
 To list docker image
-
 docker images
+'''''''''''''''''''
 Run docker image
-
-docker run -p 5000:5000 -e PORT=5000 f8c749e73678
+docker run -p 5000:5000 -e PORT=5000 8f36c20e9f11
+''''''''''''''''''''
 To check running container in docker
-
 docker ps
+'''''''''''''''''
 Tos stop docker conatiner
-
 docker stop <container_id>
+-------------------------------------------
+
+python setup.py install
+''''''''''''''''''''''''''
+
+pip install ipykernel
